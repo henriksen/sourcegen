@@ -1,0 +1,3 @@
+﻿# Section:Property=required | default:VALUE
+Payments:ApiKey=required
+Payments:TimeoutSeconds=default:30

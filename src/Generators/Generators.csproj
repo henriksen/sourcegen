@@ -1,0 +1,26 @@
+<Project Sdk="Microsoft.NET.Sdk">
+    <PropertyGroup>
+        <TargetFramework>netstandard2.0</TargetFramework>
+        <LangVersion>preview</LangVersion>
+        <Nullable>enable</Nullable>
+        <ImplicitUsings>false</ImplicitUsings>
+        <!-- Ensures the generator is using the recommended rules created by the .NET team -->
+        <EnforceExtendedAnalyzerRules>true</EnforceExtendedAnalyzerRules>
+        <!-- Generators shouldn't produce a DLL for runtime consumption -->
+        <IncludeBuildOutput>false</IncludeBuildOutput>
+        <!-- Enables debugging -->
+        <IsRoslynComponent>true</IsRoslynComponent>
+        <GeneratePackageOnBuild>false</GeneratePackageOnBuild>
+    </PropertyGroup>
+
+    <ItemGroup>
+        <!-- Pin these to versions matching your VS/Roslyn. 4.10.x works well with VS 2022 17.10+. -->
+        <PackageReference Include="Microsoft.CodeAnalysis.CSharp" Version="4.14.0" PrivateAssets="all" />
+        <PackageReference Include="Microsoft.CodeAnalysis.Analyzers" Version="4.14.0" PrivateAssets="all" />
+    </ItemGroup>
+
+    <ItemGroup>
+        <!-- The generator needs to see attributes at compile time -->
+        <ProjectReference Include="..\Annotations\Annotations.csproj" />
+    </ItemGroup>
+</Project>
