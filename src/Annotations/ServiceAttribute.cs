@@ -6,7 +6,7 @@ public enum Lifetime { Singleton, Scoped, Transient }
 public sealed class ServiceAttribute(Lifetime lifetime = Lifetime.Scoped) : Attribute
 {
     // Positional: choose lifetime (default Scoped)
-    public Lifetime Lifetime { get; } = lifetime;
+    public Lifetime Lifetime { get; set; } = lifetime;
 
     // Named: override the service interface to register against
     public Type? As { get; set; }
