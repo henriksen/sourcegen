@@ -24,10 +24,6 @@
     </ItemGroup>
 
     <ItemGroup>
-        <AdditionalFiles Include="options.schema" />
-    </ItemGroup>
-
-    <ItemGroup>
         <None Include="appsettings.json">
             <CopyToOutputDirectory>Always</CopyToOutputDirectory>
         </None>
