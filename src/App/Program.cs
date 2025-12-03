@@ -6,6 +6,17 @@ using Microsoft.Extensions.DependencyInjection;
 Console.WriteLine(Hello.Message); // Stage 0: generated
 
 
-// var order = new Order { Id = OrderId.New(), Status = "Open", Quantity = 3 };
-// var dto = order.ToOrderDto();
-// Console.WriteLine($"{dto.Id} {dto.Status} {dto.Quantity}");
+// Build configuration (loads appsettings.json)
+var cfg = new ConfigurationBuilder()
+	.AddJsonFile("appsettings.json", optional: true)
+	.AddEnvironmentVariables()
+	.Build();
+
+var services = new ServiceCollection()
+	.AddPaymentsOptions(cfg); // <-- generated: Add{TypeName}(IServiceCollection, IConfiguration)
+
+using var sp = services.BuildServiceProvider();
+
+// Prove it's bound + validated
+var opts = sp.GetRequiredService<Microsoft.Extensions.Options.IOptions<PaymentsOptions>>().Value;
+Console.WriteLine($"Payments.ApiKey: {opts.ApiKey}, Timeout: {opts.TimeoutSeconds}");
