@@ -1,5 +1,4 @@
 ﻿using System.Reflection;
-using Annotations;
 using FluentAssertions;
 using Microsoft.CodeAnalysis;
 using Microsoft.CodeAnalysis.CSharp;
