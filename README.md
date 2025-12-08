@@ -1,7 +1,8 @@
 # Code that writes code - Source Generators in .NET
 
-Glenn F. Henriksen
-@henriksen
+See the different branches for the different working samples
+
+Glenn F. Henriksen  
 www.henriksen.no
 
 https://github.com/henriksen/sourcegen
