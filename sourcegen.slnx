@@ -1,5 +1,6 @@
 <Solution>
   <Folder Name="/other/">
+    <File Path="PubConf.jpeg" />
     <File Path="README.md" />
   </Folder>
   <Folder Name="/src/">
