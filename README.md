@@ -3,6 +3,6 @@
 See the different branches for the different working samples
 
 Glenn F. Henriksen  
-www.henriksen.no
+https://www.henriksen.no
 
 https://github.com/henriksen/sourcegen

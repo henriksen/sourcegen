@@ -1,0 +1,13 @@
+<Solution>
+  <Folder Name="/other/">
+    <File Path="README.md" />
+  </Folder>
+  <Folder Name="/src/">
+    <Project Path="src/Annotations/Annotations.csproj" />
+    <Project Path="src/App/App.csproj" />
+    <Project Path="src/Generators/Generators.csproj" />
+  </Folder>
+  <Folder Name="/tests/">
+    <Project Path="tests/Generators.Tests/Generators.Tests.csproj" />
+  </Folder>
+</Solution>
